@@ -42,3 +42,15 @@ async function apiRequest<T>(url:string): Promise<ApiResponse<T>>{
         };
     }
 }
+
+class ApiService<T> {
+    constructor(private endpoint: string) {}
+
+    async getAll(): Promise<ApiResponse<T[]>> {
+        return apiRequest<T[]>(this.endpoint);
+    }
+
+    async getOne(id: number): Promise<ApiResponse<T>> {
+        return apiRequest<T>(`${this.endpoint}/${id}`);
+    }
+}
