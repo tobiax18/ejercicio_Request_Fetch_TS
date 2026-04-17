@@ -100,6 +100,7 @@ Request_Fetch_TS/
 ├── src/
 │   └── index.ts       # Código principal
 ├── .gitignore
+├── package-lock.json
 ├── package.json
 ├── tsconfig.json
 └── README.md
@@ -123,3 +124,9 @@ Request_Fetch_TS/
 - **Clases genéricas** para encapsular lógica de acceso a datos
 - **Manejo de errores** diferenciando errores HTTP vs errores de red
 - **async/await** con `try/catch` para operaciones asíncronas
+
+---
+
+## 📄 Licencia
+
+Este proyecto es para fines educativos.
