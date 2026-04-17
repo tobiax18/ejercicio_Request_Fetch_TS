@@ -1,0 +1,27 @@
+{
+  "name": "ejercicio_request_fetch_ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobiax18/ejercicio_Request_Fetch_TS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tobiax18/ejercicio_Request_Fetch_TS/issues"
+  },
+  "homepage": "https://github.com/tobiax18/ejercicio_Request_Fetch_TS#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}
