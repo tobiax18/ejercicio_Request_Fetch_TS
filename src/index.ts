@@ -38,7 +38,7 @@ async function apiRequest<T>(url:string): Promise<ApiResponse<T>>{
         return{
             data:null,
             error:"fallo la conexion total, compre internet",
-            status: 500
+            status: 0  // 0 indica que no hubo respuesta HTTP
         };
     }
 }
