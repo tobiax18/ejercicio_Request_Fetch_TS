@@ -54,3 +54,47 @@ class ApiService<T> {
         return apiRequest<T>(`${this.endpoint}/${id}`);
     }
 }
+
+// Tipos de datos
+type Post = {
+    id: number;
+    title: string;
+    body: string;
+    userId: number;
+};
+
+type User = {
+    id: number;
+    name: string;
+    email: string;
+    phone: string;
+};
+
+// Instancias de ApiService
+const postService = new ApiService<Post>('https://jsonplaceholder.typicode.com/posts');
+const userService = new ApiService<User>('https://jsonplaceholder.typicode.com/users');
+
+// Pruebas
+async function main() {
+    // getAll de posts
+    const posts = await postService.getAll();
+    console.log('=== TODOS LOS POSTS ===');
+    console.log(posts.status, posts.data?.length, posts.error);
+
+    // getOne de un post
+    const post = await postService.getOne(1);
+    console.log('=== POST #1 ===');
+    console.log(post.status, post.data, post.error);
+
+    // getAll de usuarios
+    const users = await userService.getAll();
+    console.log('=== TODOS LOS USUARIOS ===');
+    console.log(users.status, users.data?.length, users.error);
+
+    // ID invalido para probar el manejo de errores
+    const invalid = await postService.getOne(99999);
+    console.log('=== ID INVALIDO ===');
+    console.log(invalid.status, invalid.data, invalid.error);
+}
+
+main();
